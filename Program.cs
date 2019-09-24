@@ -10,11 +10,14 @@ namespace ToDo
             bool ShouldRun = true;
             while (ShouldRun)
             {
+                Console.Clear();
+
                 Console.WriteLine("1. Add Todo ");
-                Console.WriteLine("2 .List  Tado!");
+                Console.WriteLine("2 .List  Todo!");
                 Console.WriteLine("3. Exit");
 
                 ConsoleKeyInfo PressedKey = Console.ReadKey();
+                Console.Clear();
                 switch (PressedKey.Key)
                 {
                     case ConsoleKey.D1:
@@ -22,10 +25,10 @@ namespace ToDo
 
                         break;
                     case ConsoleKey.D2:
-                        Console.Clear();
+                       
                         break;
                     case ConsoleKey.D3:
-                        Console.Clear();
+                      
                         ShouldRun = false;
 
                         break;
