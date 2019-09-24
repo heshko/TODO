@@ -12,8 +12,8 @@ namespace ToDo.Domain
        
         public DateTime? DueDate { get; set; }
         public DateTime? Completed { get; set; }
-        public bool IsCompleted {
-            get { return Completed != null; } }
+        //public bool IsCompleted {
+        //    get { return Completed != null; } }
 
         public Task(int id, string title,DateTime dueDate)
         {
