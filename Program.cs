@@ -1,4 +1,5 @@
 ﻿using System;
+using ToDo.Domain;
 
 namespace ToDo
 {
@@ -8,6 +9,9 @@ namespace ToDo
         {
 
             bool ShouldRun = true;
+
+            Task[] tasks = new Task[100];
+            int countTaks = 0;
             while (ShouldRun)
             {
                 Console.Clear();
@@ -21,7 +25,20 @@ namespace ToDo
                 switch (PressedKey.Key)
                 {
                     case ConsoleKey.D1:
-                        Console.Clear();
+                        Console.Write("Title: ");
+
+                        string title = Console.ReadLine();
+
+                        Console.Write("Due date (yyyy-mm-dd hh:mm):");
+
+                        DateTime dueDate = DateTime.Parse(Console.ReadLine());
+                       
+
+
+                        Task task = new Task(title,dueDate);
+                        tasks[0] = task;
+                      
+                        Console.ReadKey();
 
                         break;
                     case ConsoleKey.D2:
